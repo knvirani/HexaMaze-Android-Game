@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Hexa Maze</string>
+    <string name="sound_off">OFF</string>
+    <string name="sound_on">ON</string>
+    <string name="easy_level">Easy</string>
+    <string name="medium_level">Medium</string>
+    <string name="hard_level">Hard</string>
+    <string name="legend_level">Legend</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agree">Agree</string>
+    <string name="not_agree_with">Not agree</string>
+    <string name="share_game">Share Game Link</string>
+    <string name="get_maze_box">Get Maze Box</string>
+    <string name="sound_control">Sound Control</string>
+    <string name="theme_control">Theme Control</string>
+    <string name="settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="daily">Daily</string>
+    <string name="our_apps">Our Apps</string>
+    <string name="get_app">Get App</string>
+    <string name="open_app">Open App</string>
+    <string name="statistics">Statistics</string>
+    <string name="options">Settings</string>
+    <string name="app_settings">Settings</string>
+    <string name="feedback">Feedback</string>
+    <string name="about">About</string>
+    <string name="more_apps_frm_gujmcq">More Apps from GujMCQ</string>
+    <string name="join_us_on_twitter">Join us on Twitter</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="play_game">Play</string>
+    <string name="resume_game">Resume</string>
+    <string name="restart_game">Restart</string>
+
+    <string name="show_score">Show score</string>
+    <string name="show_time">Show time</string>
+    <string name="game_sound">Audio effects</string>
+    <string name="game_vibration">Vibration</string>
+    <string name="contact">Contact</string>
+    <string name="contact_subject">Subject</string>
+    <string name="contact_message">Message</string>
+    <string name="update_app">Update on Google Play Store</string>
+
+    <string name="step_1_content_desc">
+        This Hexa Maze puzzle game consists of one puzzle with up to 61 numbers. Each hexagon has only 1 number.\n\nThe light-blue Hexagons are prefilled whereas dark-blues are going to be filled by you.\n\nThe minimum number is 1 and maximum is 61. Both are always visible and prefilled.
+    </string>
+
+    <string name="step_2_content_desc">
+        In this step, you will learn how to start.\n\nFocus on number 1. So, next sequence number is 2, 3 and so on.\n\nHence 1 and 3 are prefilled. So, number 2 is to be filled by you. When you fill it, it will make a sequence of 1-2-3.\n\nSimilarly, you have to make a sequence of 1 to 61.\n\nUpon any wrong fill, the corresponding hexagon will be red. So, you can erase it by pressing on Undo icon.
+    </string>
+
+    <string name="next_step">Next Step</string>
+    <string name="how_to_play">How to Play</string>
+    <string name="add_pattern">Add Hexa Patterns</string>
+
+</resources>

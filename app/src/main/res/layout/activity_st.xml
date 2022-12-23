@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/top_ll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/board_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shape_id_et"
+                android:layout_marginStart="@dimen/standard_space"
+                android:hint="Shape Id"
+                android:inputType="number"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/set_shape_mb"
+                android:text="Set Shape"
+                android:layout_marginHorizontal="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/shape_id_set_tv"
+                    android:text="Shape Ids"
+                    android:paddingHorizontal="@dimen/standard_space"
+                    android:paddingVertical="@dimen/standard_half_space"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </HorizontalScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <com.fourshape.numbermazes.maze_core.BoardView
+        android:id="@+id/board_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/board_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginEnd="@dimen/standard_half_space"
+            android:id="@+id/check_match_mb"
+            android:text="Match Check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginStart="@dimen/standard_half_space"
+            android:id="@+id/win_test_mb"
+            android:text="Win Test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

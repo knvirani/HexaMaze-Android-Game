@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="standard_space">16dp</dimen>
+    <dimen name="standard_half_space">8dp</dimen>
+
+    <dimen name="game_time_text">36sp</dimen>
+    <dimen name="life_sign_img_size">40dp</dimen>
+
+    <dimen name="control_img_size">35dp</dimen>
+    <dimen name="control_status_text_size">20sp</dimen>
+    <dimen name="undo_img_size">50dp</dimen>
+    <dimen name="game_start_progress_corner_radius">16dp</dimen>
+    <dimen name="game_start_progress_track_thickness">50dp</dimen>
+
+    <dimen name="sound_switch_bg_corner_radius">16dp</dimen>
+    <dimen name="sound_switch_rect_stroke_width">1dp</dimen>
+    <dimen name="diff_level_card_stroke_width">2dp</dimen>
+
+    <dimen name="level_box_size">100dp</dimen>
+    <dimen name="level_box_card_radius">8dp</dimen>
+
+    <dimen name="popup_body_text_size">16sp</dimen>
+    <dimen name="popup_title_text_size">20sp</dimen>
+    <dimen name="popup_btn_text_size">16sp</dimen>
+
+    <dimen name="home_page_daily_day_text_size">48sp</dimen>
+    <dimen name="home_page_game_start_btn_text_size">36sp</dimen>
+    <dimen name="home_page_my_stats_btn_text_size">36sp</dimen>
+    <dimen name="home_page_stats_icon_size">70dp</dimen>
+    <dimen name="home_page_stats_text_size">24sp</dimen>
+
+    <dimen name="calendar_mark_circle_size">16dp</dimen>
+    <dimen name="calendar_mark_stroke_width">2dp</dimen>
+
+    <dimen name="month_title_size">28sp</dimen>
+    <dimen name="year_title_size">28sp</dimen>
+    <dimen name="daily_page_trophy_width">270dp</dimen>
+    <dimen name="daily_page_trophy_height">270dp</dimen>
+    <dimen name="calendar_width">245dp</dimen>
+    <dimen name="calendar_height">180dp</dimen>
+    <dimen name="daily_page_play_btn">45dp</dimen>
+    <dimen name="daily_play_mtrl_cv_stroke_width">3dp</dimen>
+
+    <!-- Options Activity -->
+    <dimen name="options_menu_text_size">18sp</dimen>
+
+    <dimen name="dynamic_stats_value_text_size">20sp</dimen>
+    <dimen name="dynamic_stats_type_label_size">16sp</dimen>
+
+    <!-- Game Session Activity -->
+    <dimen name="game_session_target_cell_view_size">250dp</dimen>
+    <dimen name="howtoplay_header_text">28sp</dimen>
+    <dimen name="howtoplay_content_desc_text">20sp</dimen>
+
+</resources>

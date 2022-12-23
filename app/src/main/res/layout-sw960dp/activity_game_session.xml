@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/game_status_view"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:background="@color/default_game_status_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="@dimen/standard_space"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/game_time"
+            android:textSize="@dimen/game_time_text"
+            android:fontFamily="@font/roboto_black"
+            android:id="@+id/game_score_tv"
+            android:text="00000"
+            android:lines="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:padding="@dimen/standard_space"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/game_time"
+            android:textSize="@dimen/game_time_text"
+            android:fontFamily="@font/roboto_black"
+            android:id="@+id/game_time_tv"
+            android:text="00:00"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/life_img_1"
+                android:layout_gravity="center"
+                android:tint="@color/default_available_life"
+                android:src="@drawable/ic_fav"
+                android:layout_width="@dimen/life_sign_img_size"
+                android:layout_height="@dimen/life_sign_img_size"/>
+
+            <ImageView
+                android:id="@+id/life_img_2"
+                android:layout_gravity="center"
+                android:tint="@color/default_available_life"
+                android:src="@drawable/ic_fav"
+                android:layout_width="@dimen/life_sign_img_size"
+                android:layout_height="@dimen/life_sign_img_size"/>
+
+            <ImageView
+                android:id="@+id/life_img_3"
+                android:layout_gravity="center"
+                android:tint="@color/default_lost_life"
+                android:src="@drawable/ic_fav"
+                android:layout_width="@dimen/life_sign_img_size"
+                android:layout_height="@dimen/life_sign_img_size"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:padding="@dimen/standard_space"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/game_time"
+            android:textSize="@dimen/game_time_text"
+            android:fontFamily="@font/roboto_black"
+            android:id="@+id/game_level_tv"
+            android:text="EASY"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/game_board_view_container"
+        android:visibility="visible"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_status_view"
+        app:layout_constraintBottom_toTopOf="@id/bottom_control_bar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.fourshape.numbermazes.maze_core.THView
+                android:id="@+id/th_view"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_width="@dimen/game_session_target_cell_view_size"
+                android:layout_height="@dimen/game_session_target_cell_view_size"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.fourshape.numbermazes.maze_core.BoardView
+                android:id="@+id/board_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:visibility="visible"
+        android:id="@+id/bottom_control_bar_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            app:layout_constraintBottom_toTopOf="@id/bottom_control_bar_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/undo_action_cv"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="0dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/undo_action_status_tv"
+                android:textSize="@dimen/control_status_text_size"
+                android:text="10"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="@dimen/control_img_size"
+                android:layout_marginEnd="@dimen/standard_space"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/undo_ico"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_space"
+                android:src="@drawable/ic_undo"
+                android:layout_width="@dimen/control_img_size"
+                android:layout_height="@dimen/control_img_size"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/go_back_action_cv"
+                app:cardBackgroundColor="@color/default_game_bottom_bar_bg"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="@color/default_control_icon_tint"
+                    android:id="@+id/back_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_space"
+                    android:rotation="180"
+                    android:src="@drawable/ic_right_arrow"
+                    android:layout_width="@dimen/control_img_size"
+                    android:layout_height="@dimen/control_img_size"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/pause_action_cv"
+                app:cardBackgroundColor="@color/default_game_bottom_bar_bg"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="@color/default_control_icon_tint"
+                    android:id="@+id/pause_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_space"
+                    android:src="@drawable/ic_pause_filled_circle"
+                    android:layout_width="@dimen/control_img_size"
+                    android:layout_height="@dimen/control_img_size"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sound_action_cv"
+                app:cardBackgroundColor="@color/default_game_bottom_bar_bg"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="@color/default_control_icon_tint"
+                    android:id="@+id/sound_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_space"
+                    android:src="@drawable/ic_volume_control"
+                    android:layout_width="@dimen/control_img_size"
+                    android:layout_height="@dimen/control_img_size"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/theme_action_cv"
+                app:cardBackgroundColor="@color/default_game_status_bg"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="0dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:tint="@color/default_control_icon_tint"
+                    android:id="@+id/theme_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/standard_space"
+                    android:src="@drawable/ic_palette"
+                    android:layout_width="@dimen/control_img_size"
+                    android:layout_height="@dimen/control_img_size"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/after_won_container"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingVertical="@dimen/standard_space"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginTop="@dimen/standard_space"
+                android:layout_marginHorizontal="@dimen/standard_space"
+                app:cardBackgroundColor="@color/default_share_btn_bg"
+                android:id="@+id/share_game_cv"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/share_img_progress_circular"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:indeterminateBehavior="cycle"
+                    app:indicatorSize="28dp"
+                    app:indicatorColor="@color/default_share_btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/share_game_tv"
+                    android:drawableStart="@drawable/ic_share"
+                    android:drawablePadding="@dimen/standard_space"
+                    android:drawableTint="@color/default_share_btn_text"
+                    android:textColor="@color/default_share_btn_text"
+                    android:textSize="@dimen/home_page_game_start_btn_text_size"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="@dimen/standard_space"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="Share Game"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/standard_space"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/default_home_page_primary_btn_bg"
+                    android:id="@+id/new_game_cv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/new_game_tv"
+                        android:textColor="@color/default_home_page_primary_btn_text"
+                        android:textSize="@dimen/home_page_game_start_btn_text_size"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="@dimen/standard_half_space"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="New Game"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_marginStart="@dimen/standard_space"
+                    app:cardBackgroundColor="@color/default_home_page_primary_btn_bg"
+                    android:id="@+id/new_session_cv"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/new_session_tv"
+                        android:textColor="@color/default_home_page_primary_btn_text"
+                        android:textSize="@dimen/home_page_game_start_btn_text_size"
+                        android:fontFamily="@font/roboto_medium"
+                        android:padding="@dimen/standard_half_space"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="New Session"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/linear_progress_indicator"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        app:trackCornerRadius="@dimen/game_start_progress_corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:trackThickness="@dimen/game_start_progress_track_thickness"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

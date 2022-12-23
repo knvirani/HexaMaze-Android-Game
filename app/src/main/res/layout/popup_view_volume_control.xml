@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_cv"
+    app:cardBackgroundColor="@color/default_popup_card_bg">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/inner_parent_cv"
+        android:layout_margin="@dimen/standard_space"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/default_unselected_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_weight="1"
+                android:id="@+id/left_part"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/right_part"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:drawableStart="@drawable/ic_sound_off"
+                    android:drawableTint="@color/default_unselected_text"
+                    android:paddingVertical="@dimen/standard_half_space"
+                    android:paddingHorizontal="@dimen/standard_space"
+                    android:gravity="center"
+                    android:text="@string/sound_off"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    android:textColor="@color/default_unselected_text"
+                    android:background="@drawable/bg_sound_on_switch"
+                    android:drawablePadding="@dimen/standard_space"
+                    android:id="@+id/off_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/right_part"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/left_part"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:drawableStart="@drawable/ic_sound_on"
+                    android:drawableTint="@color/default_selected_text"
+                    android:paddingVertical="@dimen/standard_half_space"
+                    android:paddingHorizontal="@dimen/standard_space"
+                    android:gravity="center"
+                    android:text="@string/sound_on"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="16sp"
+                    android:background="@drawable/bg_sound_on_switch"
+                    android:textColor="@color/default_selected_text"
+                    android:textAllCaps="true"
+                    android:drawablePadding="@dimen/standard_space"
+                    android:id="@+id/on_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</com.google.android.material.card.MaterialCardView>

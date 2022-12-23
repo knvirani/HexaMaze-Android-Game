@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/default_app_background"
+    android:padding="@dimen/standard_space">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_space" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/default_apps_list_app_title"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Games &amp; Apps from\nGujMCQ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/header_desc"
+        android:paddingVertical="@dimen/standard_space"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingHorizontal="@dimen/standard_space"
+        android:text="All apps &amp; games listed here are designed and developed by GujMCQ Developers."
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:src="@drawable/developer_logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/standard_space" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

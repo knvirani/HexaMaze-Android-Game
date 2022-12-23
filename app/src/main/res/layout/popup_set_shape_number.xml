@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/popup_header"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="Shape Rank: 35"
+            android:padding="@dimen/standard_space"
+            android:textSize="24sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/rc_address"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="@dimen/standard_space"
+            android:text="Row: 0, Col: 8"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_margin="@dimen/standard_space"
+            android:id="@+id/shape_cell_value_edit_text"
+            android:hint="Enter Cell Value"
+            android:inputType="number"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginHorizontal="@dimen/standard_space"
+            android:layout_marginBottom="@dimen/standard_space"
+            android:id="@+id/set_cell_value_mb"
+            android:text="Set Cell Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

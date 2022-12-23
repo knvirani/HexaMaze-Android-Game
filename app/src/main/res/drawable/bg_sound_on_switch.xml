@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="false">
+        <shape>
+            <solid android:color="@color/default_unselected_bg" />
+            <stroke android:width="@dimen/sound_switch_rect_stroke_width"
+                android:color="@color/default_selected_bg" />
+        </shape>
+    </item>
+
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/default_selected_bg" />
+            <stroke android:width="@dimen/sound_switch_rect_stroke_width"
+                android:color="@color/default_selected_bg" />
+        </shape>
+    </item>
+
+</selector>
+

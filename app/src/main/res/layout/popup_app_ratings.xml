@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent_cv"
+        app:cardBackgroundColor="@color/default_app_background"
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/popup_header"
+                android:padding="@dimen/standard_space"
+                android:textColor="@color/default_popup_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/popup_title_text_size"
+                android:text="Rate Number Maze"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:stepSize="0.5"
+                android:numStars="5"
+                android:layout_marginVertical="@dimen/standard_space"
+                android:layout_gravity="center"
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/later_cv"
+                    app:cardBackgroundColor="@color/default_app_background"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/later_tv"
+                        android:textColor="@color/theme_1_popup_body_text"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/popup_btn_text_size"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Later"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:paddingVertical="@dimen/standard_space"
+                        android:paddingHorizontal="@dimen/standard_half_space"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/already_rated_cv"
+                    app:cardBackgroundColor="@color/default_app_background"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/already_rated_tv"
+                        android:textColor="@color/theme_1_popup_body_text"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/popup_btn_text_size"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Already rated"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:paddingVertical="@dimen/standard_space"
+                        android:paddingHorizontal="@dimen/standard_half_space"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

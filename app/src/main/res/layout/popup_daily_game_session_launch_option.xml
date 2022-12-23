@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/default_popup_card_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/content_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resume_cv"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/default_popup_card_bg"
+            android:layout_marginHorizontal="@dimen/standard_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/resume_tv"
+                android:layout_gravity="center"
+                android:text="@string/resume_game"
+                android:textColor="@color/default_popup_body_text"
+                android:drawableTint="@color/default_popup_body_text"
+                android:drawableStart="@drawable/ic_continue"
+                android:drawablePadding="@dimen/standard_space"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:padding="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/restart_cv"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/default_popup_card_bg"
+            android:layout_marginHorizontal="@dimen/standard_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/restart_tv"
+                android:layout_gravity="center"
+                android:text="@string/restart_game"
+                android:textColor="@color/default_popup_body_text"
+                android:drawableTint="@color/default_popup_body_text"
+                android:drawableStart="@drawable/ic_restart"
+                android:drawablePadding="@dimen/standard_space"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:padding="@dimen/standard_space"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:padding="@dimen/standard_space"
+        android:id="@+id/progress_circular"
+        android:indeterminate="true"
+        app:indicatorColor="@color/default_circular_progress_indicator"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

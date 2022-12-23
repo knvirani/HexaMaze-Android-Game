@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.howtoplay.Step1Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/content_header_tv"
+                    android:textColor="@color/default_app_bar_text"
+                    android:padding="@dimen/standard_space"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="STEP 2: Fill First Cell"
+                    android:textSize="@dimen/howtoplay_header_text"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:src="@drawable/hexa_maze_promo"
+                    android:layout_gravity="center"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"/>
+
+                <TextView
+                    android:text="In this step, you will learn how to start.\n\nFocus on number 1. So, next sequence number is 2, 3 and so on.\n\nHence 1 and 3 are prefilled. So, number 2 is to be filled by you. When you fill it, it will make a sequence of 1-2-3.\n\nSimilarly, you have to make a sequence of 1 to 61.\n\nUpon any wrong fill, the corresponding hexagon will be red. So, you can erase it by pressing on Undo icon."
+                    android:textColor="@color/default_app_bar_text"
+                    android:padding="@dimen/standard_space"
+                    android:textSize="@dimen/howtoplay_content_desc_text"
+                    android:fontFamily="@font/roboto_regular"
+                    android:id="@+id/content_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

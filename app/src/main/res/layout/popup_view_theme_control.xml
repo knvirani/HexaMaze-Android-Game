@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_cv"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/default_popup_card_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="320dp"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/inner_parent_cv"
+            android:layout_margin="@dimen/standard_space"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/default_selected_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:background="@drawable/bg_theme_control_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/theme_1"
+                    app:cardBackgroundColor="@color/default_popup_card_bg"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/theme_1_img"
+                        android:padding="@dimen/standard_half_space"
+                        android:src="@drawable/ic_theme_1"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/theme_2"
+                    app:cardBackgroundColor="@color/default_popup_card_bg"
+                    app:cardCornerRadius="0dp"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/theme_2_img"
+                        android:padding="@dimen/standard_half_space"
+                        android:src="@drawable/ic_theme_2"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</com.google.android.material.card.MaterialCardView>

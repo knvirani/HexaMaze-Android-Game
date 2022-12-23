@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.DailyFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_container"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/calendar_title_container"
+            android:id="@+id/calender_iv"
+            android:src="@drawable/ic_daily_calendar"
+            android:layout_width="@dimen/daily_page_trophy_width"
+            android:layout_height="@dimen/daily_page_trophy_width"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:paddingHorizontal="@dimen/standard_space"
+            android:orientation="horizontal"
+            android:id="@+id/calendar_title_container"
+            app:layout_constraintBottom_toTopOf="@id/calendar_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/month_title"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="bold"
+                android:text="July"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textSize="@dimen/month_title_size"
+                android:textColor="@color/default_daily_month_text"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/separate_dot_tv"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:paddingVertical="@dimen/standard_space"
+                android:paddingHorizontal="@dimen/standard_half_space"
+                android:text="\u2022"
+                android:textSize="@dimen/year_title_size"
+                android:textColor="@color/default_daily_year_text"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/year_title"
+                android:fontFamily="@font/roboto_regular"
+                android:textStyle="normal"
+                android:text="2021"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textSize="@dimen/month_title_size"
+                android:textColor="@color/default_daily_year_text"
+                android:layout_gravity="start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/calendar_container"
+            android:layout_marginBottom="@dimen/standard_space"
+            app:layout_constraintBottom_toTopOf="@id/play_cv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeWidth="@dimen/daily_play_mtrl_cv_stroke_width"
+            app:strokeColor="@color/default_calendar_week_day_row_bg"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            android:layout_width="@dimen/calendar_width"
+            android:layout_height="@dimen/calendar_height">
+
+            <com.fourshape.numbermazes.custom_calender.CustomCalendarView
+                android:layout_gravity="center"
+                android:id="@+id/custom_calendar"
+                android:layout_width="match_parent"
+                tools:context=".MainActivity"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/standard_space"
+            app:cardBackgroundColor="@color/default_home_page_primary_btn_bg"
+            android:id="@+id/play_cv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/play_tv"
+                android:textColor="@color/default_home_page_primary_btn_text"
+                android:textSize="@dimen/home_page_game_start_btn_text_size"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="@dimen/standard_half_space"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_circular_in_play_cv"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateBehavior="cycle"
+                app:indicatorSize="32dp"
+                app:indicatorColor="@color/default_home_page_primary_btn_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        app:indicatorColor="@color/default_circular_progress_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</FrameLayout>

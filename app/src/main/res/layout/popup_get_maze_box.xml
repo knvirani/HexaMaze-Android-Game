@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent_cv"
+        app:cardBackgroundColor="@color/default_popup_card_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/popup_header"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/default_popup_title"
+                android:layout_marginVertical="@dimen/standard_space"
+                android:padding="@dimen/standard_space"
+                android:text="Get Maze Box"
+                android:textSize="@dimen/popup_title_text_size"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginBottom="@dimen/standard_space"
+                android:textSize="@dimen/popup_body_text_size"
+                android:paddingHorizontal="@dimen/standard_space"
+                android:text="To get a maze box, you must have to watch an ad. After completing the ad, you will be rewarded with 1 maze box.\n\n1 Maze box contains following things."
+                android:textColor="@color/default_app_bar_text"
+                android:gravity="start"
+                android:id="@+id/popup_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:id="@+id/divider_view_1"
+                android:background="@color/default_normal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_marginTop="@dimen/standard_space"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/undo_action_header_tv"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/default_popup_title"
+                        android:paddingHorizontal="@dimen/standard_space"
+                        android:text="Total Undo"
+                        android:textSize="@dimen/popup_body_text_size"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/undo_value_tv"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/default_popup_title"
+                        android:padding="@dimen/standard_space"
+                        android:text="10"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/life_header_tv"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/default_popup_title"
+                        android:paddingHorizontal="@dimen/standard_space"
+                        android:text="Total life"
+                        android:textSize="@dimen/popup_body_text_size"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/life_img_1"
+                            android:layout_gravity="center"
+                            android:tint="@color/default_available_life"
+                            android:src="@drawable/ic_fav"
+                            android:layout_width="@dimen/life_sign_img_size"
+                            android:layout_height="@dimen/life_sign_img_size"/>
+
+                        <ImageView
+                            android:id="@+id/life_img_2"
+                            android:layout_gravity="center"
+                            android:tint="@color/default_available_life"
+                            android:src="@drawable/ic_fav"
+                            android:layout_width="@dimen/life_sign_img_size"
+                            android:layout_height="@dimen/life_sign_img_size"/>
+
+                        <ImageView
+                            android:id="@+id/life_img_3"
+                            android:layout_gravity="center"
+                            android:tint="@color/default_available_life"
+                            android:src="@drawable/ic_fav"
+                            android:layout_width="@dimen/life_sign_img_size"
+                            android:layout_height="@dimen/life_sign_img_size"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:id="@+id/divider_view_2"
+                android:background="@color/default_normal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/close_cv"
+                    app:cardBackgroundColor="@color/default_popup_secondary_btn_bg"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/close_tv"
+                        android:textSize="@dimen/popup_btn_text_size"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="@dimen/standard_space"
+                        android:textColor="@color/default_popup_secondary_btn_text"
+                        android:text="Close"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/watch_ad_cv"
+                    app:cardBackgroundColor="@color/default_popup_primary_btn_bg"
+                    android:layout_weight="1"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="0dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progress_circular"
+                        android:visibility="invisible"
+                        android:indeterminate="true"
+                        app:indicatorColor="@color/white"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/watch_ad_tv"
+                        android:textSize="@dimen/popup_btn_text_size"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:padding="@dimen/standard_space"
+                        android:textColor="@color/default_popup_primary_btn_text"
+                        android:text="Watch Ad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
